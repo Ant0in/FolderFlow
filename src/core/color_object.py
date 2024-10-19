@@ -2,6 +2,29 @@
 
 class ColorHelper:
 
+    """
+    ColorHelper is a class designed to manage and provide access to various color configurations for the application.
+    It is initialized with a dictionary of color settings, and each color can be accessed through its respective property.
+
+    Attributes:
+    - background1_color (str): The primary background color.
+    - background2_color (str): The secondary background color.
+    - header_color (str): The color for headers.
+    - footer_color (str): The color for footers.
+    - frame1_color (str): The color for the first frame.
+    - frame2_color (str): The color for the second frame.
+    - frame3_color (str): The color for the third frame.
+    - border_color (str): The color for borders.
+    - button1_color (str): The primary button color.
+    - button2_color (str): The secondary button color.
+    - text1_color (str): The primary text color.
+    - text2_color (str): The secondary text color.
+    - positive_color (str): The color used for positive actions or indicators.
+    - negative_color (str): The color used for negative actions or indicators.
+    - unusable_button_color (str): The color for disabled or unusable buttons.
+    - placeholder_color (str): The color for placeholder text or elements.
+    """
+
     def __init__(self, color_config: dict) -> None:
         
         self._background1_color: str = color_config['background1_color']

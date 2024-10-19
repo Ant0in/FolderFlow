@@ -2,6 +2,26 @@
 
 class Queue:
 
+    """
+    Queue is a class that implements a basic queue data structure, allowing for typical queue operations such as enqueue, dequeue, and priority insertion.
+    It also provides methods to check if the queue is empty, retrieve the current size, and inspect the first element.
+
+    Methods:
+    - is_empty() -> bool: Returns True if the queue is empty, otherwise False.
+    - enqueue(obj: object) -> None: Adds an object to the end of the queue.
+    - dequeue() -> object: Removes and returns the first object from the queue. Returns None if the queue is empty.
+    - enqueue_max_priority(obj: object) -> None: Adds an object to the front of the queue (priority insertion).
+    - remove(obj: object) -> None: Removes the specified object from the queue, if it exists.
+    - top() -> object: Returns the first object in the queue without removing it.
+
+    Properties:
+    - size (int): Returns the current size of the queue.
+    - values (list): Returns the list of objects currently in the queue.
+
+    Raises:
+    - None. The methods handle queue underflow internally by checking if the queue is empty.
+    """
+
     def __init__(self, init_values: list[object]) -> None:
 
         self._values: list = init_values if init_values else []

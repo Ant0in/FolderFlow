@@ -6,6 +6,18 @@ import yaml
 
 class YAMLSafeHelper:
     
+    """
+    A helper class for safely loading and dumping YAML files.
+
+    Methods:
+    - safe_load(yaml_filepath: str) -> dict:
+    Loads data from a YAML file and returns it as a dictionary.
+    Raises an error if the file extension is not .yaml or if loading fails.
+    - safe_dump(yaml_filepath: str, data: dict) -> None:
+    Dumps a dictionary into a YAML file.
+    Raises an error if the file extension is not .yaml or if dumping fails.
+    """
+
     @staticmethod
     def safe_load(yaml_filepath: str) -> dict:
 

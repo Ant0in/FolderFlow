@@ -14,6 +14,31 @@ from tkinter import ttk, filedialog
 
 class TaskCreationGUI:
 
+    """
+    A graphical user interface for creating a sorting task with customizable file selection options.
+
+    Attributes:
+    - root (tk.Tk): The main application window.
+    - _app_config (AppConfigurationObject): The application configuration object.
+    - _supported_extensions_fp (str): The file path to the YAML file containing supported file extensions.
+    - _supported_extensions (dict[str: list[str]]): A dictionary of supported file extensions loaded from the YAML file.
+    - _sorting_task (SortingTask): The current sorting task created by the user.
+
+    Methods:
+    - __init__(root: tk.Tk, app_config: AppConfigurationObject, supported_extensions_fp: str): Initializes the GUI and sets up the window and components.
+    - init_GUI() -> None: Initializes and configures the GUI components for creating a sorting task.
+    - select_filesource_folder() -> None: Opens a dialog to select the folder containing files to sort.
+    - confirm_task_creation() -> None: Creates a new sorting task with the specified options and closes the window.
+    - on_enter(event: tk.Event) -> None: Handles the Enter key event to confirm the task creation.
+    - on_escape(event: tk.Event) -> None: Closes the task creation window.
+
+    Properties:
+    - app_config: Returns the application configuration object.
+    - supported_extensions: Returns a dictionary of supported file extensions.
+    - supported_extensions_filepath: Returns the file path of the supported extensions YAML file.
+    - sorting_task: Returns the currently created sorting task.
+    """
+
     def __init__(self, root: tk.Tk, app_config: AppConfigurationObject, supported_extensions_fp: str) -> None:
 
         self.root: tk.Tk = root

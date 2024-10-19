@@ -3,6 +3,18 @@
 
 class StringMatchHelper:
 
+    """
+    A utility class for string manipulation and matching.
+
+    Methods:
+    - split_string(string: str) -> list[str]:
+    Splits a given string into a list of words, removing specific characters
+    and treating spaces, underscores, and parentheses as delimiters.
+    - string_match(string_to_match: str, target_string: str) -> bool:
+    Checks if the target string contains any word that starts with the specified
+    string to match, ignoring case.
+    """
+
     @staticmethod
     def split_string(string: str) -> str:
 

@@ -12,6 +12,20 @@ import os
 
 class SortingTaskDataManager:
 
+    """
+    A manager class for creating, loading, and saving sorting tasks.
+
+    Methods:
+    - create_task(task_path: str, selected_ext: list[str], local_mode: bool, shuffle_mode: bool, config_folder: str) -> SortingTask:
+    Creates a new sorting task by crawling a specified folder for files of selected extensions.
+    - load_task(supported_extension_fp: str) -> SortingTask:
+    Loads a sorting task from a YAML file selected by the user.
+    - save_task(task: SortingTask, task_fp: str) -> bool:
+    Saves the current sorting task to a specified file path, returning the success status.
+    - save_as_task(task: SortingTask) -> bool:
+    Opens a dialog for the user to specify a file path to save the current sorting task.
+    """
+
     @staticmethod
     def create_task(task_path: str, selected_ext: list[str], local_mode: bool, shuffle_mode: bool, config_folder: str) -> SortingTask:
 

@@ -12,7 +12,29 @@ from datetime import datetime
 
 class FileObject:
 
-    # File object meant to be opened by App.
+    """
+    FileObject is a base class for representing and managing a file within the application.
+    It provides methods for validating file paths and retrieving metadata such as the file name, size, and timestamps
+    for when the file was last accessed or modified.
+
+    Methods:
+    - set_new_path(new_fp: str): Sets a new file path after verifying its validity.
+    - get_file_data(): Returns a dictionary containing metadata such as the file's path, name, size, last opened, and last modified times.
+    - close(): Placeholder method, can be extended in subclasses for resource management.
+
+    Properties:
+    - path (str): Returns the full file path.
+    - dirname (str): Returns the directory of the file.
+    - filename (str): Returns the name of the file.
+    - extension (str): Returns the file's extension (e.g., .txt, .png).
+    - filesize (int): Returns the size of the file in bytes.
+    - last_opened (str): Returns a string representing the last time the file was accessed.
+    - last_modified (str): Returns a string representing the last time the file was modified.
+
+    Raises:
+    - AssertionError: If the file path is invalid or the file does not exist.
+    """
+
     def __init__(self, fp: str) -> None:
         AssertionHelper.verify_filepath(fp=fp)
         self._fp: str = fp
@@ -65,6 +87,20 @@ class FileObject:
 
 class ImageObject(FileObject):
 
+    """
+    ImageObject is a subclass of FileObject, specifically designed to handle image files.
+    In addition to the basic file operations provided by FileObject, ImageObject adds functionality to retrieve image dimensions.
+
+    Methods:
+    - get_file_data(): Returns a dictionary containing the file's metadata and the dimensions of the image.
+
+    Properties:
+    - dimension (tuple): Returns the width and height of the image as a tuple (width, height). If the dimensions cannot be retrieved, it returns None.
+
+    Raises:
+    - Exception: If there is an issue when trying to open the image to retrieve its dimensions.
+    """
+
     def __init__(self, fp: str) -> None:
         super().__init__(fp)
 
@@ -85,6 +121,25 @@ class ImageObject(FileObject):
 
 
 class VideoObject(FileObject):
+
+    """
+    VideoObject is a subclass of FileObject, specifically designed to handle video files.
+    It includes functionality for loading video files, replaying videos, retrieving the current frame, and obtaining the video's dimensions and duration.
+
+    Methods:
+    - load_video_cap(): Loads the video file into a cv2.VideoCapture object for further operations.
+    - replay_video(): Resets the video to the beginning for replaying.
+    - get_current_frame(): Retrieves the current frame of the video as a PIL Image object. If the end of the video is reached, it automatically replays.
+    - close_video_cap(): Closes and releases the cv2.VideoCapture object.
+    - get_file_data(): Returns a dictionary containing the file's metadata, video dimensions, and video duration.
+
+    Properties:
+    - dimension (tuple): Returns the video's width and height as a tuple (width, height).
+    - duration (int): Returns the duration of the video in seconds.
+
+    Raises:
+    - AssertionError: If the file path is invalid or the file does not exist.
+    """
 
     def __init__(self, fp: str) -> None:
         

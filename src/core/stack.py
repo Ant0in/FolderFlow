@@ -2,6 +2,26 @@
 
 class Stack:
 
+    """
+    Stack is a class that implements a basic stack data structure, allowing for standard stack operations such as push, pop, and priority insertion.
+    It provides methods to check if the stack is empty, retrieve the current size, and inspect the top element.
+
+    Methods:
+    - is_empty() -> bool: Returns True if the stack is empty, otherwise False.
+    - push(obj: object) -> None: Adds an object to the top of the stack.
+    - pop() -> object: Removes and returns the top object from the stack. Returns None if the stack is empty.
+    - push_lowest_priority(obj: object) -> None: Adds an object to the bottom of the stack (lowest priority).
+    - remove(obj: object) -> None: Removes the specified object from the stack, if it exists.
+    - top() -> object: Returns the top object in the stack without removing it.
+
+    Properties:
+    - size (int): Returns the current size of the stack.
+    - values (list): Returns the list of objects currently in the stack.
+
+    Raises:
+    - None. The methods handle stack underflow internally by checking if the stack is empty.
+    """
+
     def __init__(self, init_values: list[object]) -> None:
 
         self._values: list = init_values if init_values else []

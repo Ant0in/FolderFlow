@@ -10,6 +10,28 @@ import tkinter as tk
 
 class NameChangerGUI:
 
+    """
+    A graphical user interface for changing the names of files in a sorting task.
+
+    Attributes:
+    - root (tk.Tk): The main application window.
+    - _sorting_task (SortingTask): The current sorting task containing files to rename.
+    - _app_config (AppConfigurationObject): The application configuration object.
+    - has_changed_name (bool): Flag indicating whether the file name has been changed.
+
+    Methods:
+    - __init__(root: tk.Tk, sorting_task: SortingTask, app_config: AppConfigurationObject): Initializes the GUI and sets up the window and components.
+    - init_GUI() -> None: Initializes and configures the GUI components for renaming files.
+    - rename_file() -> None: Renames the selected file to the new name provided by the user.
+    - rename_file_random() -> None: Renames the selected file to a random name of specified length.
+    - on_enter(event: tk.Event) -> None: Handles the Enter key event to confirm the renaming of the file.
+    - on_escape(event: tk.Event) -> None: Closes the name change window.
+
+    Properties:
+    - sorting_task: Returns the current sorting task.
+    - app_config: Returns the application configuration object.
+    """
+
     def __init__(self, root: tk.Tk, sorting_task: SortingTask, app_config: AppConfigurationObject) -> None:
         
         self.root: tk.Tk = root

@@ -1,22 +1,48 @@
 
-
-
-
 from src.scripts.favorite_manager import FavoriteManager
 from src.core.app_config_object import AppConfigurationObject
 from src.core.assertion_helper import AssertionHelper
 
 import tkinter as tk
 from tkinter import filedialog
-
 import os
-
-
 
 
 
 class FavoriteCrawlerGUI:
 
+    """
+    A graphical user interface for selecting source and destination directories to 
+    copy favorite files marked with a specific symbol.
+
+    Attributes:
+    - root (tk.Tk): The main application window.
+    - _app_config (AppConfigurationObject): The application configuration object.
+    - _target_directory (tk.StringVar): The source directory for favorite files.
+    - _direction_folder (tk.StringVar): The destination directory for copying files.
+    - _create_subdir (tk.BooleanVar): A flag indicating whether to create subdirectories.
+    - _favorite_mark (str): The marker used to identify favorite files.
+
+    Methods:
+    - __init__(root: tk.Tk, app_config: AppConfigurationObject, favorite_mark: str = '[★]'): Initializes the GUI and sets default values.
+    - init_GUI() -> None: Initializes and configures the GUI components for the favorite file crawler.
+    - ask_target_directory() -> None: Prompts the user to select a source directory.
+    - ask_destination_directory() -> None: Prompts the user to select a destination directory.
+    - on_quit() -> None: Closes the favorite crawler window.
+    - on_confirm() -> None: Confirms the selected directories, verifies them, and copies favorite files.
+    - on_enter(event: tk.Event) -> None: Handles the Enter key event to confirm selections.
+    - on_escape(event: tk.Event) -> None: Handles the Escape key event to close the window.
+
+    Properties:
+    - app_config: Returns the application configuration object.
+    - target_directory: Returns the selected source directory.
+    - direction_folder: Returns the selected destination directory.
+    - create_subdir: Returns whether to create subdirectories.
+    - favorite_mark: Returns the favorite file marker.
+    - set_target_directory(new_dir: str) -> None: Sets the target directory for favorite files.
+    - set_direction_directory(new_dir: str) -> None: Sets the destination directory for copied files.
+    - set_create_subdir(boolvar: bool) -> None: Sets the flag for creating subdirectories.
+    """
 
     def __init__(self, root: tk.Tk, app_config: AppConfigurationObject, favorite_mark: str = '[★]') -> None:
         

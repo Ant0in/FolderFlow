@@ -12,6 +12,31 @@ import os
 
 class CustomCategoryGUI:
 
+    """
+    A graphical user interface for creating custom categories in a sorting task.
+
+    Attributes:
+    - root (tk.Tk): The main application window.
+    - _sorting_task (SortingTask): The sorting task to which custom categories will be added.
+    - _app_config (AppConfigurationObject): The application configuration object.
+    - _target_directory (str): The directory selected for the custom category.
+    - has_created_category (bool): Indicates whether a category has been created.
+
+    Methods:
+    - __init__(root: tk.Tk, sorting_task: SortingTask, app_config: AppConfigurationObject): Initializes the GUI and prompts the user to select a target directory.
+    - ask_directory() -> None: Prompts the user to select a directory.
+    - init_GUI() -> None: Initializes the GUI components for creating a custom category.
+    - create_category() -> None: Creates a custom category based on user input.
+    - on_enter(event: tk.Event) -> None: Handles the Enter key event to create a category.
+    - on_escape(event: tk.Event) -> None: Handles the Escape key event to close the category window.
+
+    Properties:
+    - sorting_task: Returns the sorting task associated with the GUI.
+    - app_config: Returns the application configuration.
+    - target_directory: Returns the target directory for the custom category.
+    - set_target_directory(new_dir: str) -> None: Sets the target directory and verifies its validity.
+    """
+
     def __init__(self, root: tk.Tk, sorting_task: SortingTask, app_config: AppConfigurationObject) -> None:
 
         self.root: tk.Tk = root

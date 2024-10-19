@@ -7,6 +7,34 @@ from src.core.stack import Stack
 
 class SortingTask:
 
+    """
+    SortingTask is a class designed to manage and organize a collection of files for sorting tasks. 
+    It utilizes a Queue to hold files that need to be sorted and a Stack to keep track of files that have already been reviewed. 
+    Additionally, it supports custom categorization for sorting.
+
+    Attributes:
+    - files (Queue): A queue that holds files pending sorting.
+    - reviewed_files (Stack): A stack that contains files that have been reviewed.
+    - custom_categories (list): A list of custom categories for sorting files.
+    - path (str | None): The path associated with the sorting task.
+    - init_file_count (int | None): The initial count of files to be sorted.
+
+    Methods:
+    - is_empty() -> bool: Returns True if there are no files to sort, otherwise False.
+    - file_enqueue(file: FileObject) -> None: Adds a file to the queue for sorting.
+    - file_dequeue() -> FileObject: Removes the next file from the queue and pushes it onto the reviewed files stack.
+    - get_current_file() -> FileObject: Returns the file currently at the front of the queue without removing it.
+    - get_most_recent_reviewed_file() -> FileObject: Returns the most recently reviewed file from the stack without removing it.
+    - restore_previous_reviewed_file() -> None: Restores the most recently reviewed file back to the front of the queue.
+    - get_custom_categories(sort_by_name: bool = True) -> list: Returns the list of custom categories, sorted by name if specified.
+    - add_custom_categories(*new_categories: dict) -> None: Adds new custom categories to the existing list.
+    - remove_custom_category(target: dict) -> None: Removes a specified custom category from the list.
+    - clear_custom_categories() -> None: Clears all custom categories from the list.
+
+    Raises:
+    - AssertionError: If a new category added is not a dictionary.
+    """
+
     def __init__(self,
             files: list[FileObject] | None = None,
             reviewed_files: list[FileObject] | None = None,

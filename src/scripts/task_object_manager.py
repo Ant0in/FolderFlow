@@ -12,6 +12,29 @@ import pathlib
 
 class SortingTaskObjectManager:
 
+    """
+    A manager class for handling sorting tasks and file objects.
+
+    Methods:
+    - get_file_extension(file: str) -> str:
+    Returns the file extension of a given file if it exists.
+    - create_file_object(file: str, valid_ext: dict[str: list[str]]) -> FileObject:
+    Creates a FileObject based on the file extension and valid extensions.
+    - create_task_object(
+        files: list[str] = None,
+        reviewed_files: list[str] = None,
+        custom_categories: list = None,
+        supported_ext_fp: str = None,
+        init_file_count: int = None,
+        task_path: str = None,
+    ) -> SortingTask:
+    Creates a SortingTask object from the given files and configuration.
+    - dump_task_data(task: SortingTask, task_folder: str, taskname: str) -> bool:
+    Saves the sorting task data to a YAML file in the specified folder.
+    - load_task_data(task_path: str, supported_ext_fp: str) -> SortingTask:
+    Loads a sorting task from a YAML file and returns a SortingTask object.
+    """
+
     @staticmethod
     def get_file_extension(file: str) -> str:
         

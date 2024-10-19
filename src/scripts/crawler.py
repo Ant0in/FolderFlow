@@ -4,6 +4,31 @@ import random
 
 
 class Crawler:
+    
+    """
+    Crawler is a class designed to manage and filter files in a directory based on allowed file extensions.
+    It provides functionality to crawl through directories and retrieve files that match the specified extensions.
+
+    Attributes:
+    - _allowed_ext (list[str]): A list of allowed file extensions.
+
+    Methods:
+    - get_allowed() -> list[str]: Returns the list of allowed file extensions.
+    - is_allowed(extension: str) -> bool: Checks if a given file extension is allowed.
+    - add_allowed(*extensions: str) -> None: Adds new file extensions to the list of allowed extensions.
+    - remove_allowed(*extensions: str) -> None: Removes specified file extensions from the list of allowed extensions.
+    - clear_allowed() -> None: Clears all file extensions from the list of allowed extensions.
+    - crawl_folder(root: str, local_only: bool = False, shuffle: bool = False, bypass_extension_limitation: bool = False) -> list[str]: Crawls the specified directory (root) and returns a list of valid files based on the allowed extensions.
+        
+    Parameters:
+    - root (str): The root directory to crawl.
+    - local_only (bool): If True, only crawls the specified root directory; if False, crawls subdirectories as well.
+    - shuffle (bool): If True, shuffles the order of the returned files.
+    - bypass_extension_limitation (bool): If True, ignores the allowed extensions limitation.
+
+    Raises:
+    - AssertionError: If the specified root path is not a directory or does not exist.
+    """
 
     def __init__(self, *allowed_extensions: str) -> None:
         

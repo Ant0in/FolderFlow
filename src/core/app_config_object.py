@@ -8,7 +8,24 @@ from src.scripts.yaml_helper import YAMLSafeHelper
 
 class AppConfigurationObject:
 
-    # Container pour la configuration de l'App
+    """
+    AppConfigurationObject is a class responsible for managing the application's configuration settings,
+    which are loaded from a YAML file. It handles parameters related to resizing modes and color schemes, 
+    ensuring the correct format and values are applied.
+
+    Key functionalities:
+    - Loads and validates the application configuration from the specified YAML file.
+    - Provides access to various configuration properties such as color schemes and resize modes.
+    - Allows switching between different resize modes (adjust and stretch).
+    - Saves updated configuration back to the YAML file.
+    - Supports loading and applying new color themes from external YAML files.
+
+    Attributes:
+    - config_file_path (str): The file path of the configuration file.
+    - random_name_length (int): The length of the random name to be generated.
+    - colors (ColorHelper): The color settings for the application.
+    - resize_mode (int): The current resize mode (0 for adjust, 1 for stretch).
+    """
     
     def __init__(self, config_fp: str) -> None:
         

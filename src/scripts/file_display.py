@@ -9,7 +9,21 @@ from PIL import Image, ImageTk
 
 
 class FileDisplayer:
+    
+    """
+    Displays files (images and videos) on a given Tkinter canvas.
 
+    Methods:
+    - update_display(sorting_task: SortingTask, target_canvas: tk.Canvas, app_config: AppConfigurationObject) -> ImageTk:
+    Updates the display by showing the current file from the sorting task on the target canvas.
+    - display_file(sorting_task: SortingTask, target_canvas: tk.Canvas, app_config: AppConfigurationObject) -> ImageTk:
+    Displays the current file (image or video) on the target canvas based on its type.
+    - display_image_file(img: ImageObject, target_canvas: tk.Canvas, app_config: AppConfigurationObject) -> ImageTk:
+    Displays an image file on the canvas, resizing based on the application's configuration.
+    - display_video_file(vid: VideoObject, target_canvas: tk.Canvas, app_config: AppConfigurationObject) -> ImageTk:
+        Displays a video frame on the canvas, resizing based on the application's configuration.
+    """
+    
     @staticmethod
     def update_display(sorting_task: SortingTask, target_canvas: tk.Canvas, app_config: AppConfigurationObject) -> ImageTk:
 

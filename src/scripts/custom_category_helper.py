@@ -10,6 +10,16 @@ import shutil
 
 
 class CustomCategoryHelper:
+    
+    """
+    A helper class for managing custom categories in a SortingTask.
+
+    Methods:
+    - delete_custom_category(sorting_task: SortingTask, custom_category: dict) -> None: Removes a custom category from the sorting task.
+    - add_custom_category(sorting_task: SortingTask, custom_category: dict) -> None: Adds a new custom category to the sorting task.
+    - move_file_into_category(sorting_task: SortingTask, custom_category: dict) -> bool: Moves the currently selected file into the specified custom category.
+    - add_custom_categories_from_dir(sorting_task: SortingTask) -> bool: Adds custom categories from a selected directory.
+    """
 
     @staticmethod
     def delete_custom_category(sorting_task: SortingTask, custom_category: dict) -> None:

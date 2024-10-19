@@ -10,6 +10,16 @@ import random
 
 
 class FilenameManager:
+    
+    """
+    Manages file renaming operations within a sorting task.
+
+    Methods:
+    - rename_file(sorting_task: SortingTask, new_name: str) -> None:
+    Renames the current file in the sorting task to the specified new name.
+    - rename_file_random(sorting_task: SortingTask, random_length: int) -> None:
+    Renames the current file in the sorting task to a randomly generated name of specified length.
+    """
 
     @staticmethod
     def rename_file(sorting_task: SortingTask, new_name: str) -> None:

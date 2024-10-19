@@ -14,6 +14,25 @@ from tkinter import ttk, filedialog
 
 class TaskEditGUI:
 
+    """
+    A graphical user interface for editing an existing sorting task.
+
+    This class allows users to modify the parameters of a sorting task previously created in the application.
+
+    Attributes:
+    - root (tk.Tk): The main application window.
+    - _app_config (AppConfigurationObject): The application configuration object containing visual styles and settings.
+    - _sorting_task (SortingTask): The current sorting task that is being edited.
+
+    Methods:
+    - __init__(root: tk.Tk, app_config: AppConfigurationObject, sorting_task: SortingTask): Initializes the GUI with the provided application configuration and sorting task.
+    - init_GUI() -> None: Sets up and configures the graphical components for editing the sorting task.
+
+    Properties:
+    - app_config: Returns the application configuration object.
+    - sorting_task: Returns the current sorting task being edited.
+    """
+
     def __init__(self, root: tk.Tk, app_config: AppConfigurationObject, sorting_task: SortingTask) -> None:
 
         self.root: tk.Tk = root
