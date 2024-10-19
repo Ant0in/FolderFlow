@@ -1,8 +1,8 @@
 
 
-from core.assertion_helper import AssertionHelper
-from core.color_object import ColorHelper
-from scripts.yaml_helper import YAMLSafeHelper
+from src.core.assertion_helper import AssertionHelper
+from src.core.color_object import ColorHelper
+from src.scripts.yaml_helper import YAMLSafeHelper
 
 
 
