@@ -8,6 +8,8 @@ from src.scripts.yaml_helper import YAMLSafeHelper
 
 class AppConfigurationObject:
 
+    # Container pour la configuration de l'App
+    
     def __init__(self, config_fp: str) -> None:
         
         AssertionHelper.verify_file_extension(config_fp, '.yaml')

@@ -1,0 +1,4 @@
+PyYAML
+pillow
+opencv-python
+send2trash

@@ -666,7 +666,6 @@ class SortingGUI:
         self.sorting_task.restore_previous_reviewed_file()
         self.update_info_frame()
 
-
     def resize_logic(self) -> None:
         if not self.app_config: return
         self.app_config.switch_resize_mode()
