@@ -52,7 +52,7 @@ class CustomCategoryHelper:
         root: str = filedialog.askdirectory()
         if not root: return False
 
-        categories: list = [{'path': os.path.join(root, subfolder), 'name': subfolder} for subfolder in os.listdir(root)]
+        categories: list = [{'path': os.path.join(root, subfolder), 'name': subfolder} for subfolder in os.listdir(root) if os.path.isdir(os.path.join(root, subfolder))]
         if not categories: return False
 
         sorting_task.clear_custom_categories()
