@@ -5,7 +5,7 @@
 FolderFlow is an intuitive file management system designed to streamline your workflow. With features that allow you to tag files as favorites, organize them into personalized folders, and save tasks for easy tracking, FolderFlow enhances your productivity. Get valuable insights on your files and manage them efficiently with an easy-to-use interface. Say goodbye to clutter and hello to organized, accessible files!
 
 <p align="center">
-  <img src="./img/ex.png" alt="Lamp problem" width="900"/>
+  <img src="./img/ex.png" alt="app frame" width="900"/>
   <br/>
   <strong>Folderflow in action.</strong>
 </p>
