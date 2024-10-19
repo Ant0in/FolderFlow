@@ -1,0 +1,16 @@
+
+# Supported extensions
+
+image_extensions:
+- .png
+- .jpg
+- .PNG
+- .jfif
+- .jpeg
+- .bmp
+        
+video_extensions: 
+- .gif
+- .avi
+- .mp4
+- .mov

@@ -1,0 +1,25 @@
+
+
+# Configuration pour le thème "Blue Night"
+
+background1_color: '#0c0e12'
+background2_color: '#3c435c'
+
+header_color: '#3b414f'
+footer_color: '#......'
+
+frame1_color: '#161921'
+frame2_color: '#1a1f2a'
+frame3_color: '#2b3343'
+
+border_color: '#......'
+
+button1_color: '#2b3040'
+button2_color: '#343b54'
+text1_color: '#fff9e6'
+text2_color: '#ffe8a0'
+
+positive_color: '#00ff00'
+negative_color: '#ff0000'
+unusable_button_color: '#000000'
+placeholder_color: '#ff00ff'

@@ -1,0 +1,44 @@
+
+
+# Relative dimensions for sorter app geometry.
+
+
+# App borders
+left_border_padding:    .005
+right_border_padding:   .005
+top_border_padding:     .01
+bottom_border_padding:  .01
+
+display_canvas:
+  relative_width: .80
+  relative_height: .80
+  x_offset: .20
+  y_offset: .0
+
+sorting_utils_canvas:
+  relative_width: .20
+  relative_height: .15
+  x_offset: .0
+  y_offset: .0
+
+sorting_canvas:
+  relative_width: .20
+  relative_height: .85
+  x_offset: .0
+  y_offset: .15
+
+info_canvas:
+  relative_width: .50
+  relative_height: .20
+  x_offset: .2
+  y_offset: .8
+
+option_canvas:
+  relative_width: .30
+  relative_height: .20
+  x_offset: .7
+  y_offset: .8
+
+
+
+
