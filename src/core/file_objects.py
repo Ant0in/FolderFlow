@@ -17,9 +17,9 @@ class FileObject:
         AssertionHelper.verify_filepath(fp=fp)
         self._fp: str = fp
 
-    def set_path(self, fp: str) -> None:
-        AssertionHelper.verify_filepath(fp=fp)
-        self._fp = fp
+    def set_new_path(self, new_fp: str) -> None:
+        AssertionHelper.verify_filepath(fp=new_fp)
+        self._fp = new_fp
 
     @property
     def path(self) -> str:
