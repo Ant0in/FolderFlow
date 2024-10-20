@@ -34,16 +34,11 @@ Make sure you have `Python >= 3.10` installed.
 2. Navigate to the project directory:
 
    ```bash
-   cd src/
+   cd FolderFlow/
    ```
 
-3. Create a virtual environment and install dependencies:
+3. Install dependencies:
    
-   ```bash
-   python -m venv .\venv
-   .\venv\Scripts\activate
-   ```
-
    ```bash
    pip install -r requirements.txt
    ```
@@ -56,7 +51,7 @@ Make sure you have `Python >= 3.10` installed.
 
 ## How to use Folderflow
 
-soon
+soon :)
 
 ## License
 
