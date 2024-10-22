@@ -67,7 +67,7 @@ class CustomCategoryGUI:
     @staticmethod
     def get_directory_name(path: str) -> str:
         AssertionHelper.verify_filepath(path)
-        return os.path.dirname(path)
+        return os.path.basename(path)
 
 
     def ask_directory(self) -> None:

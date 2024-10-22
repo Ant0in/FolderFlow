@@ -35,7 +35,7 @@ from send2trash import send2trash
 class SortingGUI:
 
 
-    APP_NAME: str = "Ultimate Sorter"
+    APP_NAME: str = "FolderFlow"
     FAVORITE_MARK: str = '[★]'
 
     GUI_CONFIG_FILENAME: str = "gui_config.yaml"

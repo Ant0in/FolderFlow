@@ -5,6 +5,7 @@ image_extensions:
 - .png
 - .jpg
 - .PNG
+- .JPG
 - .jfif
 - .jpeg
 - .bmp
